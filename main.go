@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	print "book/formatter"
+	"fmt"
+)
 
 type User struct {
 	Email    string
@@ -12,6 +15,7 @@ type Admin struct {
 	Level int
 }
 
+// фнкция для уровня
 func (a *Admin) LevelShow() string {
 	return fmt.Sprintf("admin %s, Level %d", a.Username, a.Level)
 }
@@ -25,6 +29,7 @@ func (u *User) GetUserName() string {
 }
 
 func main() {
+	print.Format("sadas")
 	user := &User{
 		Email:    "dauren@ya.ru",
 		Username: "dauren10",
